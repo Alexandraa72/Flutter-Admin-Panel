@@ -1,12 +1,12 @@
-import 'package:admin/models/RecentFile.dart';
+import 'package:admin/models/recent_user_model.dart';
+import 'package:admin/utils/colorful_tag.dart';
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
 
-class RecentFiles extends StatelessWidget {
-  const RecentFiles({
+class RecentDiscussions extends StatelessWidget {
+  const RecentDiscussions({
     Key? key,
   }) : super(key: key);
 
@@ -22,7 +22,7 @@ class RecentFiles extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Recent Files",
+            "Recent Open Positions",
             style: Theme.of(context).textTheme.subtitle1,
           ),
           SizedBox(
@@ -30,20 +30,21 @@ class RecentFiles extends StatelessWidget {
             child: DataTable2(
               columnSpacing: defaultPadding,
               minWidth: 600,
+              showCheckboxColumn: true,
               columns: [
                 DataColumn(
-                  label: Text("File Name"),
+                  label: Text("Position Name"),
                 ),
                 DataColumn(
-                  label: Text("Date"),
+                  label: Text("Create Date"),
                 ),
                 DataColumn(
-                  label: Text("Size"),
+                  label: Text("Total Application"),
                 ),
               ],
               rows: List.generate(
-                demoRecentFiles.length,
-                (index) => recentFileDataRow(demoRecentFiles[index]),
+                recentUsers.length,
+                (index) => recentUserDataRow(recentUsers[index]),
               ),
             ),
           ),
@@ -52,27 +53,21 @@ class RecentFiles extends StatelessWidget {
     );
   }
 }
-  
-DataRow recentFileDataRow(RecentFile fileInfo) {
+
+DataRow recentUserDataRow(RecentUser userInfo) {
   return DataRow(
     cells: [
-      DataCell(
-        Row(
-          children: [
-            SvgPicture.asset(
-              fileInfo.icon!,
-              height: 30,
-              width: 30,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
-              child: Text(fileInfo.title!),
-            ),
-          ],
-        ),
-      ),
-      DataCell(Text(fileInfo.date!)),
-      DataCell(Text(fileInfo.size!)),
+      DataCell(Container(
+          padding: EdgeInsets.all(5),
+          decoration: BoxDecoration(
+            color: getRoleColor(userInfo.role).withOpacity(.2),
+            border: Border.all(color: getRoleColor(userInfo.role)),
+            borderRadius: BorderRadius.all(Radius.circular(5.0) //
+                ),
+          ),
+          child: Text(userInfo.role!))),
+      DataCell(Text(userInfo.date!)),
+      DataCell(Text(userInfo.posts!)),
     ],
   );
 }

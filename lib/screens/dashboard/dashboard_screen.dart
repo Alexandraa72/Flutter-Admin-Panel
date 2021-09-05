@@ -6,6 +6,7 @@ import '../../constants.dart';
 import 'components/header.dart';
 
 import 'components/recent_files.dart';
+import 'components/recent_forums.dart';
 import 'components/storage_details.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -28,6 +29,8 @@ class DashboardScreen extends StatelessWidget {
                       MyFiles(),
                       SizedBox(height: defaultPadding),
                       RecentFiles(),
+                      SizedBox(height: defaultPadding),
+                      RecentDiscussions(),
                       if (Responsive.isMobile(context))
                         SizedBox(height: defaultPadding),
                       if (Responsive.isMobile(context)) StarageDetails(),

@@ -1,5 +1,5 @@
 class RecentUser {
-  final String? icon, name, date, posts, role, email;
+  final String icon, name, date, posts, role, email;
 
   RecentUser(
       {this.icon, this.name, this.date, this.posts, this.role, this.email});

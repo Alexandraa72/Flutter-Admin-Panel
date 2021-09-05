@@ -7,7 +7,7 @@ import '../../../constants.dart';
 
 class RecentDiscussions extends StatelessWidget {
   const RecentDiscussions({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
@@ -65,9 +65,9 @@ DataRow recentUserDataRow(RecentUser userInfo) {
             borderRadius: BorderRadius.all(Radius.circular(5.0) //
                 ),
           ),
-          child: Text(userInfo.role!))),
-      DataCell(Text(userInfo.date!)),
-      DataCell(Text(userInfo.posts!)),
+          child: Text(userInfo.role))),
+      DataCell(Text(userInfo.date)),
+      DataCell(Text(userInfo.posts)),
     ],
   );
 }

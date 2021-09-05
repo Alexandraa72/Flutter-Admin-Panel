@@ -1,104 +1,46 @@
 {
   "project_info": {
-    "project_number": "140667116724",
-    "firebase_url": "https://socialapp-ab211-default-rtdb.firebaseio.com",
-    "project_id": "socialapp-ab211",
-    "storage_bucket": "socialapp-ab211.appspot.com"
+      "project_number": "140667116724",
+      "project_id": "socialapp-ab211",
+      "storage_bucket": "socialapp-ab211.appspot.com"
   },
   "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:140667116724:android:12e40c25ea526c0e770be1",
-        "android_client_info": {
-          "package_name": "com.seclab.melon"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "140667116724-1lcr92utr1du1ljmffp9pev036l1fuht.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.seclab.melon",
-            "certificate_hash": "b647d5a125f57e78c7f268116c6fa638c2538a09"
-          }
-        },
-        {
-          "client_id": "140667116724-5goj6ut08mh4u2qp6avcqda8mkonr01n.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.seclab.melon",
-            "certificate_hash": "8d9a50cc5d8b1dba15bc7a431724f47011904dd6"
-          }
-        },
-        {
-          "client_id": "140667116724-at1rpfn9ndhq76g5ndmf9feoag3f3ano.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.seclab.melon",
-            "certificate_hash": "0ad4c49f6e8ce26e882d42b36e8b4d7317ad7794"
-          }
-        },
-        {
-          "client_id": "140667116724-avnvfpvphevim62elecf0lfdovfb3qpb.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.seclab.melon",
-            "certificate_hash": "f43996ea3a520661d1f23f1582fc71569677b5a7"
-          }
-        },
-        {
-          "client_id": "140667116724-fn24m5att3a0std4mhvj5k3lcdvirmgo.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.seclab.melon",
-            "certificate_hash": "75a7c10c7dbe159267579094525fe841e6c05a81"
-          }
-        },
-        {
-          "client_id": "140667116724-qe0q0lioq9c5qb7gv1n1hnouovebr5rt.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.seclab.melon",
-            "certificate_hash": "573e59eeb94688b16986df16bfbff734e14ee8c6"
-          }
-        },
-        {
-          "client_id": "140667116724-sohtaqk667j8331vbh4mivcmi6ne50lg.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.seclab.melon",
-            "certificate_hash": "17ccd0d581a86d8ac1088f039fbe094dee0d38bc"
-          }
-        },
-        {
-          "client_id": "140667116724-22lhaok9rvm1qkt9vleqne2n5na5gmfd.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCheuZ2zD3-3u5JOzu3pelVkyvSQuy07Ws"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "140667116724-22lhaok9rvm1qkt9vleqne2n5na5gmfd.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "140667116724-9rcpbgir9v5q03jbkfjl53o7tout10dh.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "mn.seclab.melon",
-                "app_store_id": "1582435424"
+      {
+          "client_info": {
+              "mobilesdk_app_id": "1:140667116724:android:12e40c25ea526c0e770be1",
+              "android_client_info": {
+                  "package_name": "com.seclab.melon"
               }
-            }
-          ]
-        }
+          },
+          "oauth_client": [
+              {
+                  "client_id": "140667116724-22lhaok9rvm1qkt9vleqne2n5na5gmfd.apps.googleusercontent.com",
+                  "client_type": 3
+              }
+          ],
+          "api_key": [
+              {
+                  "current_key": "AIzaSyCheuZ2zD3-3u5JOzu3pelVkyvSQuy07Ws"
+              }
+          ],
+          "services": {
+              "appinvite_service": {
+                  "other_platform_oauth_client": [
+                      {
+                          "client_id": "140667116724-22lhaok9rvm1qkt9vleqne2n5na5gmfd.apps.googleusercontent.com",
+                          "client_type": 3
+                      },
+                      {
+                          "client_id": "140667116724-ol4vooeh82le1l1p4uvk360p6mldcvfp.apps.googleusercontent.com",
+                          "client_type": 2,
+                          "ios_info": {
+                              "bundle_id": "com.seclab.lemonmn"
+                          }
+                      }
+                  ]
+              }
+          }
       }
-    }
   ],
   "configuration_version": "1"
 }

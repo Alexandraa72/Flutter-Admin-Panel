@@ -15,7 +15,7 @@ class RecentFiles extends StatelessWidget {
           {String reciveruserId, String senderuserId}) =>
       FirebaseFirestore.instance
           .collection("profile")
-          .limit(100)
+          .limit(10)
           .orderBy("wallet", descending: true)
           .snapshots();
   @override
@@ -79,11 +79,11 @@ DataRow recentFileDataRow(DocumentSnapshot snapshot) {
       DataCell(
         Row(
           children: [
-            Image.network(
-              fileInfo.profilePic,
-              height: 30,
-              width: 30,
-            ),
+            // Image.network(
+            //   fileInfo.profilePic,
+            //   height: 30,
+            //   width: 30,
+            // ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
               child: Text(fileInfo.displayName),

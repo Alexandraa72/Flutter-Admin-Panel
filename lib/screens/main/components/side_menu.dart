@@ -17,12 +17,16 @@ class SideMenu extends StatelessWidget {
           DrawerListTile(
             title: "Dashboard",
             svgSrc: "assets/icons/menu_dashbord.svg",
-            press: () {},
+            press: () {
+              Navigator.pushNamed(context, '/dashboard');
+            },
           ),
           DrawerListTile(
             title: "Transaction",
             svgSrc: "assets/icons/menu_tran.svg",
-            press: () {},
+            press: () {
+              Navigator.pushNamed(context, '/transaction');
+            },
           ),
           DrawerListTile(
             title: "Task",
@@ -64,9 +68,9 @@ class DrawerListTile extends StatelessWidget {
   const DrawerListTile({
     Key key,
     // For selecting those three line once press "Command+D"
-     this.title,
-     this.svgSrc,
-     this.press,
+    this.title,
+    this.svgSrc,
+    this.press,
   }) : super(key: key);
 
   final String title, svgSrc;

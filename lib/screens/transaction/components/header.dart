@@ -2,11 +2,9 @@ import 'package:admin/controllers/MenuController.dart';
 import 'package:admin/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 import '../../../constants.dart';
-import 'data_controller.dart';
 
 class Header extends StatelessWidget {
   const Header({
@@ -24,7 +22,7 @@ class Header extends StatelessWidget {
           ),
         if (!Responsive.isMobile(context))
           Text(
-            "Dashboard",
+            "Transaction",
             style: Theme.of(context).textTheme.headline6,
           ),
         if (!Responsive.isMobile(context))
@@ -73,22 +71,16 @@ class ProfileCard extends StatelessWidget {
   }
 }
 
-class SearchField extends StatefulWidget {
+class SearchField extends StatelessWidget {
   const SearchField({
     Key key,
   }) : super(key: key);
 
   @override
-  _SearchFieldState createState() => _SearchFieldState();
-}
-
-class _SearchFieldState extends State<SearchField> {
-  TextEditingController searchController = TextEditingController();
-  @override
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        hintText: "Хэрэглэгч хайх",
+        hintText: "Гүйлгээ хайх",
         fillColor: secondaryColor,
         filled: true,
         border: OutlineInputBorder(
@@ -96,36 +88,7 @@ class _SearchFieldState extends State<SearchField> {
           borderRadius: const BorderRadius.all(Radius.circular(10)),
         ),
         suffixIcon: InkWell(
-          onTap: () {
-            GetBuilder(
-                init: DataController(),
-                builder: (val) {
-                  return TextButton(
-                    onPressed: () {
-                      // val.queryData(searchController.text).then((value) {
-                      //   snapshotData = value;
-                      //   // print("IRsendata: " + snapshotData.toString());
-                      //   setState(() {
-                      //     isExecuted = true;
-                      //   });
-                      // });
-                    },
-                    // child: GradientText(
-                    //   "Хайх",
-                    //   style: TextStyle(
-                    //     fontWeight: FontWeight.w600,
-                    //     fontFamily: "Sans",
-                    //     fontSize: 18.0,
-                    //     // color: Colors.white,
-                    //   ),
-                    //   colors: [
-                    //     Color(0xff9F81E9),
-                    //     Color(0xffF17AB9),
-                    //   ],
-                    // ),
-                  );
-                });
-          },
+          onTap: () {},
           child: Container(
             padding: EdgeInsets.all(defaultPadding * 0.75),
             margin: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
@@ -137,7 +100,6 @@ class _SearchFieldState extends State<SearchField> {
           ),
         ),
       ),
-      controller: searchController,
     );
   }
 }

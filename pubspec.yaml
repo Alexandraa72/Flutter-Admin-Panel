@@ -36,6 +36,8 @@ dependencies:
   firebase_auth:
   cloud_firestore:
   rxdart:
+  fluro:
+  get:
 dev_dependencies:
   flutter_test:
     sdk: flutter
